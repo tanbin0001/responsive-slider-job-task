@@ -1,16 +1,20 @@
- 
+
 import './App.css'
-import Slider from './component/Slider'
-import Slider2 from './component/Slider2'
+import Banner from './component/Banner/Banner'
+import Navbar from './component/Navbar/Navbar'
+import Slider from './component/Slider1/Slider'
+import Slider2 from './component/Slider2/Slider2'
 
 function App() {
-   
+
   return (
     <div >
-       <Slider></Slider>
-       <Slider2></Slider2>
+      <Navbar></Navbar>
+      <Banner></Banner>
+      <Slider></Slider>
+      <Slider2></Slider2>
     </div>
-  
+
   )
 }
 

@@ -8,10 +8,10 @@ import { useState } from "react";
 const ProductItem = ({ imageSrc, discount, title, price, description,previousPrice }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="lg:flex border-b-2 border-b-gray-300 py-5 lg:justify-around items-center h-96"   onMouseEnter={() => setIsHovered(true)}
+    <div className="lg:flex      py-5 lg:justify-around items-center lg:h-96"   onMouseEnter={() => setIsHovered(true)}
     onMouseLeave={() => setIsHovered(false)}>
-      <div className="lg:w-[800px] relative">
-        <img className="hover:opacity-65 lg:p-10" src={imageSrc} alt="" />
+      <div className="lg:w-[500px]   relative">
+        <img className="hover:opacity-65  mx-auto lg:p-10" src={imageSrc} alt="" />
         {discount && (
           <div
             style={{
@@ -30,7 +30,7 @@ const ProductItem = ({ imageSrc, discount, title, price, description,previousPri
           </div>
         )}
       </div>
-      <div className="text-start space-y-5 mx-10">
+      <div className="lg:text-start lg:w-[500px] space-y-5 mx-10  ">
         <div className="rating">
           <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" />
           <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" checked />
@@ -39,14 +39,13 @@ const ProductItem = ({ imageSrc, discount, title, price, description,previousPri
           <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" />
         </div>
         <h3 className="font-bold text-1xl">{title}</h3>
-<div className='flex '>
+<div className='flex    w-full  justify-center lg:justify-start '>
 <h2 className="font-bold text-2xl text-orange-500">{price}</h2>
 <h2 className='ml-10 text-gray-400 font-bold'><s>{previousPrice}</s></h2>
 </div>
         <p className="text-gray-500">{description}</p>
         <button className={`btn rounded-full bg-gray-500 text-white ${isHovered ? 'visible' : 'hidden'} `}>Add to cart</button>       
-         {/* {isHovered && <button className="btn rounded-full">Add to cart</button>} */}
-      </div>
+       </div>
     </div>
   );
 };
